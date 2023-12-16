@@ -1,0 +1,117 @@
+[2023-12-16T20:04:28.556+0000] {processor.py:157} INFO - Started process (PID=90) to work on /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:04:28.584+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/dag-webscrappinglinkedin.py for tasks to queue
+[2023-12-16T20:04:28.625+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:04:28.623+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:04:29.347+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:04:29.281+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/apps/dag-webscrappinglinkedin.py", line 9, in <module>
+    from webscrappinglinkedin.crawler import crawler
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 152, in <module>
+    crawler()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 49, in crawler
+    driver = init_browser()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 33, in init_browser
+    driver = webdriver.Chrome(options=browser_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chromium/webdriver.py", line 53, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 102, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 115, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.cache/selenium/chromedriver/linux64/120.0.6099.71/chromedriver unexpectedly exited. Status code was: 127
+[2023-12-16T20:04:29.352+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:04:29.466+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/dag-webscrappinglinkedin.py took 0.943 seconds
+[2023-12-16T20:04:59.927+0000] {processor.py:157} INFO - Started process (PID=158) to work on /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:04:59.930+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/dag-webscrappinglinkedin.py for tasks to queue
+[2023-12-16T20:04:59.935+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:04:59.935+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:05:00.703+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:05:00.681+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/apps/dag-webscrappinglinkedin.py", line 9, in <module>
+    from webscrappinglinkedin.crawler import crawler
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 152, in <module>
+    crawler()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 49, in crawler
+    driver = init_browser()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 33, in init_browser
+    driver = webdriver.Chrome(options=browser_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chromium/webdriver.py", line 53, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 102, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 115, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.cache/selenium/chromedriver/linux64/120.0.6099.71/chromedriver unexpectedly exited. Status code was: 127
+[2023-12-16T20:05:00.706+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:05:01.267+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/dag-webscrappinglinkedin.py took 1.352 seconds
+[2023-12-16T20:05:33.731+0000] {processor.py:157} INFO - Started process (PID=225) to work on /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:05:33.734+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/dag-webscrappinglinkedin.py for tasks to queue
+[2023-12-16T20:05:33.742+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:05:33.741+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:05:34.754+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:05:34.678+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/apps/dag-webscrappinglinkedin.py", line 9, in <module>
+    from webscrappinglinkedin.crawler import crawler
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 152, in <module>
+    crawler()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 49, in crawler
+    driver = init_browser()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 33, in init_browser
+    driver = webdriver.Chrome(options=browser_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chromium/webdriver.py", line 53, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 102, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 115, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.cache/selenium/chromedriver/linux64/120.0.6099.71/chromedriver unexpectedly exited. Status code was: 127
+[2023-12-16T20:05:34.759+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:05:34.898+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/dag-webscrappinglinkedin.py took 1.176 seconds
+[2023-12-16T20:06:08.623+0000] {processor.py:157} INFO - Started process (PID=291) to work on /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:06:08.627+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/dag-webscrappinglinkedin.py for tasks to queue
+[2023-12-16T20:06:08.643+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:06:08.637+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:06:24.125+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:06:24.029+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/apps/dag-webscrappinglinkedin.py", line 9, in <module>
+    from webscrappinglinkedin.crawler import crawler
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 152, in <module>
+    crawler()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 49, in crawler
+    driver = init_browser()
+  File "/opt/airflow/plugins/webscrappinglinkedin/crawler.py", line 33, in init_browser
+    driver = webdriver.Chrome(options=browser_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/chromium/webdriver.py", line 53, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 102, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 115, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.cache/selenium/chromedriver/linux64/120.0.6099.71/chromedriver unexpectedly exited. Status code was: 127
+[2023-12-16T20:06:24.129+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:06:24.224+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/dag-webscrappinglinkedin.py took 15.612 seconds
+[2023-12-16T20:10:40.396+0000] {processor.py:157} INFO - Started process (PID=322) to work on /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:14:34.738+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/dag-webscrappinglinkedin.py for tasks to queue
+[2023-12-16T20:14:35.084+0000] {logging_mixin.py:154} INFO - [2023-12-16T20:14:34.856+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:14:35.332+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/dag-webscrappinglinkedin.py
+[2023-12-16T20:14:38.923+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/dag-webscrappinglinkedin.py took 238.727 seconds
