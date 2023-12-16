@@ -1,0 +1,5 @@
+[2023-12-16T19:51:34.544+0000] {processor.py:157} INFO - Started process (PID=243) to work on /opt/airflow/dags/apps/scrapingjobs/dag-scrapingjobs.py
+[2023-12-16T19:51:34.583+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/apps/scrapingjobs/dag-scrapingjobs.py for tasks to queue
+[2023-12-16T19:51:34.597+0000] {logging_mixin.py:154} INFO - [2023-12-16T19:51:34.597+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/apps/scrapingjobs/dag-scrapingjobs.py
+[2023-12-16T19:51:34.657+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/apps/scrapingjobs/dag-scrapingjobs.py
+[2023-12-16T19:51:40.216+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/apps/scrapingjobs/dag-scrapingjobs.py took 5.856 seconds
