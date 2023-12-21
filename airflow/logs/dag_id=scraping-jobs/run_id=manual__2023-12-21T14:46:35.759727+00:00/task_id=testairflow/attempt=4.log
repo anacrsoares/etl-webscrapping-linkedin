@@ -1,0 +1,103 @@
+[2023-12-21T14:58:46.347+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509
+[2023-12-21T14:58:46.360+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test***'
+[2023-12-21T14:58:46.579+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509
+[2023-12-21T14:58:46.582+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test***'
+[2023-12-21T14:58:46.817+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scraping-jobs.testairflow manual__2023-12-21T14:46:35.759727+00:00 [queued]>
+[2023-12-21T14:58:46.852+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scraping-jobs.testairflow manual__2023-12-21T14:46:35.759727+00:00 [queued]>
+[2023-12-21T14:58:46.854+0000] {taskinstance.py:1361} INFO - Starting attempt 4 of 4
+[2023-12-21T14:58:46.884+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): testairflow> on 2023-12-21 14:46:35.759727+00:00
+[2023-12-21T14:58:46.907+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'scraping-jobs', 'test***', 'manual__2023-12-21T14:46:35.759727+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/dag-webscrappinglinkedin.py', '--cfg-path', '/tmp/tmp3pe4shdj']
+[2023-12-21T14:58:46.902+0000] {standard_task_runner.py:57} INFO - Started process 864 to run task
+[2023-12-21T14:58:46.911+0000] {standard_task_runner.py:85} INFO - Job 26: Subtask test***
+[2023-12-21T14:58:47.116+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509
+[2023-12-21T14:58:47.117+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T14:46:35.759727+00:00/task_id=test***'
+[2023-12-21T14:58:47.125+0000] {task_command.py:416} INFO - Running <TaskInstance: scraping-jobs.testairflow manual__2023-12-21T14:46:35.759727+00:00 [running]> on host ae1e32dc581d
+[2023-12-21T14:58:47.352+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='scraping-jobs' AIRFLOW_CTX_TASK_ID='test***' AIRFLOW_CTX_EXECUTION_DATE='2023-12-21T14:46:35.759727+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-21T14:46:35.759727+00:00'
+[2023-12-21T14:58:47.367+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-12-21T14:58:47.373+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/dags/apps/crawler.py']
+[2023-12-21T14:58:47.400+0000] {subprocess.py:86} INFO - Output:
+[2023-12-21T14:59:00.326+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2023-12-21T14:59:00.329+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/apps/crawler.py", line 60, in <module>
+[2023-12-21T14:59:00.339+0000] {subprocess.py:93} INFO -     driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+[2023-12-21T14:59:00.343+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 407, in execute_script
+[2023-12-21T14:59:00.344+0000] {subprocess.py:93} INFO -     return self.execute(command, {"script": script, "args": converted_args})["value"]
+[2023-12-21T14:59:00.346+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+[2023-12-21T14:59:00.347+0000] {subprocess.py:93} INFO -     self.error_handler.check_response(response)
+[2023-12-21T14:59:00.348+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+[2023-12-21T14:59:00.349+0000] {subprocess.py:93} INFO -     raise exception_class(message, screen, stacktrace)
+[2023-12-21T14:59:00.351+0000] {subprocess.py:93} INFO - selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+[2023-12-21T14:59:00.353+0000] {subprocess.py:93} INFO - from unknown error: cannot determine loading status
+[2023-12-21T14:59:00.354+0000] {subprocess.py:93} INFO - from tab crashed
+[2023-12-21T14:59:00.356+0000] {subprocess.py:93} INFO -   (Session info: headless chrome=117.0.5938.62)
+[2023-12-21T14:59:00.358+0000] {subprocess.py:93} INFO - Stacktrace:
+[2023-12-21T14:59:00.359+0000] {subprocess.py:93} INFO - #0 0x560586678c07 <unknown>
+[2023-12-21T14:59:00.361+0000] {subprocess.py:93} INFO - #1 0x56058635cd4a <unknown>
+[2023-12-21T14:59:00.369+0000] {subprocess.py:93} INFO - #2 0x56058634a2d5 <unknown>
+[2023-12-21T14:59:00.370+0000] {subprocess.py:93} INFO - #3 0x56058634996c <unknown>
+[2023-12-21T14:59:00.371+0000] {subprocess.py:93} INFO - #4 0x5605863488e7 <unknown>
+[2023-12-21T14:59:00.373+0000] {subprocess.py:93} INFO - #5 0x56058634877c <unknown>
+[2023-12-21T14:59:00.374+0000] {subprocess.py:93} INFO - #6 0x560586347678 <unknown>
+[2023-12-21T14:59:00.376+0000] {subprocess.py:93} INFO - #7 0x560586347c7d <unknown>
+[2023-12-21T14:59:00.377+0000] {subprocess.py:93} INFO - #8 0x560586354dd8 <unknown>
+[2023-12-21T14:59:00.378+0000] {subprocess.py:93} INFO - #9 0x560586367703 <unknown>
+[2023-12-21T14:59:00.385+0000] {subprocess.py:93} INFO - #10 0x56058636b8bf <unknown>
+[2023-12-21T14:59:00.386+0000] {subprocess.py:93} INFO - #11 0x56058634814e <unknown>
+[2023-12-21T14:59:00.387+0000] {subprocess.py:93} INFO - #12 0x5605863673e6 <unknown>
+[2023-12-21T14:59:00.388+0000] {subprocess.py:93} INFO - #13 0x5605863d6413 <unknown>
+[2023-12-21T14:59:00.389+0000] {subprocess.py:93} INFO - #14 0x5605863bf9b7 <unknown>
+[2023-12-21T14:59:00.391+0000] {subprocess.py:93} INFO - #15 0x560586394cad <unknown>
+[2023-12-21T14:59:00.400+0000] {subprocess.py:93} INFO - #16 0x560586396266 <unknown>
+[2023-12-21T14:59:00.402+0000] {subprocess.py:93} INFO - #17 0x56058664cc00 <unknown>
+[2023-12-21T14:59:00.404+0000] {subprocess.py:93} INFO - #18 0x56058664fdad <unknown>
+[2023-12-21T14:59:00.408+0000] {subprocess.py:93} INFO - #19 0x56058664f84a <unknown>
+[2023-12-21T14:59:00.410+0000] {subprocess.py:93} INFO - #20 0x5605866502c9 <unknown>
+[2023-12-21T14:59:00.411+0000] {subprocess.py:93} INFO - #21 0x5605866567e3 <unknown>
+[2023-12-21T14:59:00.412+0000] {subprocess.py:93} INFO - #22 0x560586650666 <unknown>
+[2023-12-21T14:59:00.413+0000] {subprocess.py:93} INFO - #23 0x5605866299ea <unknown>
+[2023-12-21T14:59:00.415+0000] {subprocess.py:93} INFO - #24 0x560586669689 <unknown>
+[2023-12-21T14:59:00.417+0000] {subprocess.py:93} INFO - #25 0x56058666986f <unknown>
+[2023-12-21T14:59:00.418+0000] {subprocess.py:93} INFO - #26 0x560586678173 <unknown>
+[2023-12-21T14:59:00.419+0000] {subprocess.py:93} INFO - #27 0x7f8c562d33ec <unknown>
+[2023-12-21T14:59:00.420+0000] {subprocess.py:93} INFO - 
+[2023-12-21T14:59:00.422+0000] {subprocess.py:93} INFO - 
+[2023-12-21T14:59:00.425+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2023-12-21T14:59:00.427+0000] {subprocess.py:93} INFO - 
+[2023-12-21T14:59:00.428+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2023-12-21T14:59:00.432+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/apps/crawler.py", line 78, in <module>
+[2023-12-21T14:59:00.436+0000] {subprocess.py:93} INFO -     if driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/button').text == 'Ver mais vagas':
+[2023-12-21T14:59:00.438+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+[2023-12-21T14:59:00.442+0000] {subprocess.py:93} INFO -     return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+[2023-12-21T14:59:00.444+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+[2023-12-21T14:59:00.446+0000] {subprocess.py:93} INFO -     self.error_handler.check_response(response)
+[2023-12-21T14:59:00.447+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+[2023-12-21T14:59:00.448+0000] {subprocess.py:93} INFO -     raise exception_class(message, screen, stacktrace)
+[2023-12-21T14:59:00.450+0000] {subprocess.py:93} INFO - selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+[2023-12-21T14:59:00.451+0000] {subprocess.py:93} INFO - Stacktrace:
+[2023-12-21T14:59:00.453+0000] {subprocess.py:93} INFO - #0 0x560586678c07 <unknown>
+[2023-12-21T14:59:00.455+0000] {subprocess.py:93} INFO - #1 0x56058635cd4a <unknown>
+[2023-12-21T14:59:00.457+0000] {subprocess.py:93} INFO - #2 0x56058639445d <unknown>
+[2023-12-21T14:59:00.459+0000] {subprocess.py:93} INFO - #3 0x5605863bfb1a <unknown>
+[2023-12-21T14:59:00.460+0000] {subprocess.py:93} INFO - #4 0x5605863bbb67 <unknown>
+[2023-12-21T14:59:00.461+0000] {subprocess.py:93} INFO - #5 0x5605863bb2a7 <unknown>
+[2023-12-21T14:59:00.462+0000] {subprocess.py:93} INFO - #6 0x56058632f9d7 <unknown>
+[2023-12-21T14:59:00.463+0000] {subprocess.py:93} INFO - #7 0x56058664cc00 <unknown>
+[2023-12-21T14:59:00.464+0000] {subprocess.py:93} INFO - #8 0x56058664fdad <unknown>
+[2023-12-21T14:59:00.466+0000] {subprocess.py:93} INFO - #9 0x56058664f84a <unknown>
+[2023-12-21T14:59:00.467+0000] {subprocess.py:93} INFO - #10 0x5605866502c9 <unknown>
+[2023-12-21T14:59:00.468+0000] {subprocess.py:93} INFO - #11 0x5605866567e3 <unknown>
+[2023-12-21T14:59:00.469+0000] {subprocess.py:93} INFO - #12 0x560586650666 <unknown>
+[2023-12-21T14:59:00.470+0000] {subprocess.py:93} INFO - #13 0x5605866299ea <unknown>
+[2023-12-21T14:59:00.470+0000] {subprocess.py:93} INFO - #14 0x56058632e28e <unknown>
+[2023-12-21T14:59:00.471+0000] {subprocess.py:93} INFO - #15 0x56058632da62 <unknown>
+[2023-12-21T14:59:00.472+0000] {subprocess.py:93} INFO - #16 0x7f8c562726ca <unknown>
+[2023-12-21T14:59:00.474+0000] {subprocess.py:93} INFO - 
+[2023-12-21T14:59:00.475+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-12-21T14:59:00.492+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-12-21T14:59:00.498+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=scraping-jobs, task_id=test***, execution_date=20231221T144635, start_date=20231221T145846, end_date=20231221T145900
+[2023-12-21T14:59:00.521+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 26 for task test*** (Bash command failed. The command returned a non-zero exit code 1.; 864)
+[2023-12-21T14:59:00.556+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-21T14:59:00.591+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

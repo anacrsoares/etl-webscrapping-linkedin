@@ -1,0 +1,45 @@
+[2023-12-21T13:23:20.323+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509
+[2023-12-21T13:23:20.329+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test***'
+[2023-12-21T13:23:20.400+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509
+[2023-12-21T13:23:20.402+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test***'
+[2023-12-21T13:23:20.526+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scraping-jobs.testairflow manual__2023-12-21T13:23:03.607351+00:00 [queued]>
+[2023-12-21T13:23:20.550+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scraping-jobs.testairflow manual__2023-12-21T13:23:03.607351+00:00 [queued]>
+[2023-12-21T13:23:20.551+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-21T13:23:20.582+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): testairflow> on 2023-12-21 13:23:03.607351+00:00
+[2023-12-21T13:23:20.593+0000] {standard_task_runner.py:57} INFO - Started process 168 to run task
+[2023-12-21T13:23:20.601+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'scraping-jobs', 'test***', 'manual__2023-12-21T13:23:03.607351+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag-webscrappinglinkedin.py', '--cfg-path', '/tmp/tmpt6szifh7']
+[2023-12-21T13:23:20.603+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask test***
+[2023-12-21T13:23:20.689+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509
+[2023-12-21T13:23:20.690+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test*** permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=scraping-jobs/run_id=manual__2023-12-21T13:23:03.607351+00:00/task_id=test***'
+[2023-12-21T13:23:20.701+0000] {task_command.py:416} INFO - Running <TaskInstance: scraping-jobs.testairflow manual__2023-12-21T13:23:03.607351+00:00 [running]> on host ae1e32dc581d
+[2023-12-21T13:23:20.894+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='scraping-jobs' AIRFLOW_CTX_TASK_ID='test***' AIRFLOW_CTX_EXECUTION_DATE='2023-12-21T13:23:03.607351+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-21T13:23:03.607351+00:00'
+[2023-12-21T13:23:20.902+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-12-21T13:23:20.905+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/dags/apps/crawler.py']
+[2023-12-21T13:23:20.958+0000] {subprocess.py:86} INFO - Output:
+[2023-12-21T13:24:15.731+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2023-12-21T13:24:15.733+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/apps/crawler.py", line 152, in <module>
+[2023-12-21T13:24:15.734+0000] {subprocess.py:93} INFO -     crawler()
+[2023-12-21T13:24:15.735+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/apps/crawler.py", line 49, in crawler
+[2023-12-21T13:24:15.736+0000] {subprocess.py:93} INFO -     driver = init_browser()
+[2023-12-21T13:24:15.737+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/apps/crawler.py", line 33, in init_browser
+[2023-12-21T13:24:15.739+0000] {subprocess.py:93} INFO -     driver = webdriver.Chrome(options=browser_options)
+[2023-12-21T13:24:15.740+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+[2023-12-21T13:24:15.741+0000] {subprocess.py:93} INFO -     super().__init__(
+[2023-12-21T13:24:15.743+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/chromium/webdriver.py", line 53, in __init__
+[2023-12-21T13:24:15.745+0000] {subprocess.py:93} INFO -     self.service.start()
+[2023-12-21T13:24:15.746+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 102, in start
+[2023-12-21T13:24:15.747+0000] {subprocess.py:93} INFO -     self.assert_process_still_running()
+[2023-12-21T13:24:15.748+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/selenium/webdriver/common/service.py", line 115, in assert_process_still_running
+[2023-12-21T13:24:15.749+0000] {subprocess.py:93} INFO -     raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+[2023-12-21T13:24:15.750+0000] {subprocess.py:93} INFO - selenium.common.exceptions.WebDriverException: Message: Service /home/***/.cache/selenium/chromedriver/linux64/120.0.6099.109/chromedriver unexpectedly exited. Status code was: 127
+[2023-12-21T13:24:15.751+0000] {subprocess.py:93} INFO - 
+[2023-12-21T13:24:15.827+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-12-21T13:24:15.848+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-12-21T13:24:15.857+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=scraping-jobs, task_id=test***, execution_date=20231221T132303, start_date=20231221T132320, end_date=20231221T132415
+[2023-12-21T13:24:15.887+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 10 for task test*** (Bash command failed. The command returned a non-zero exit code 1.; 168)
+[2023-12-21T13:24:15.914+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-21T13:24:15.941+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
